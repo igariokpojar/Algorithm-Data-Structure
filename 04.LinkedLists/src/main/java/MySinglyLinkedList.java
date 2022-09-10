@@ -27,12 +27,14 @@ public class MySinglyLinkedList {
         // check if empty
         if (isEmpty())
             System.out.println("List is empty");
-        // assign prev and current with the head
 
-        Node prev=head;
-        Node current=head;
+        // assign prev and current with the head
+        Node prev=head; // create a temp var PREV
+        Node current=head; // create a temp var CURRENT
+
         while (current!=null){
             if (current.id==id){ // there is a match
+
                 // case1: head
                 if (current==head){
                     head=current.next;
