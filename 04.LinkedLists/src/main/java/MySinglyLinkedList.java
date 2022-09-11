@@ -81,5 +81,34 @@ public class MySinglyLinkedList {
             current=current.next;
         }
     }
+        void addFirst(int data) {
+            Node node = new Node(data);
+            if (isEmpty()) { // if the list is empty
+                head = tail = node;
+            } else { // if there are elements in list
+                // Make next of new Node as head
+                node.next = head;
+                // Move the head to point to new Node
+                head = node;
+                size++;
+            }
+
+
+    }
+    public int getKthFromLast(int k){
+        Node p1 = head;
+        Node p2 = head;
+        for (int i = 0; i < k; ++i) {
+            if (p2==null){
+                return 0;
+            }
+            p2=p2.next;
+        }
+        while (p2!=null){
+            p1=p1.next;
+            p2=p2.next;
+        }
+        return 1;
+    }
 }
 
