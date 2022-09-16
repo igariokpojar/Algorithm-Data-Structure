@@ -1,5 +1,6 @@
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Stack;
 
 public class CollectionStack {
 
@@ -13,6 +14,8 @@ public class CollectionStack {
         System.out.println(cStack.pop());
 
         System.out.println("peek is: "+ cStack.peek());
+
+
     }
 
 
