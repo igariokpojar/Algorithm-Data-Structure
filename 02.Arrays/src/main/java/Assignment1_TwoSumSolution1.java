@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 public class Assignment1_TwoSumSolution1 {
     public static void main(String[] args) {
-        int[] array=new int[]{4,7,2,11};
-        System.out.println(Arrays.toString(twoSumSolution1(array, 9)));
+        int[] array=new int[]{16,3,11,5,15};
+        System.out.println(Arrays.toString(twoSumSolution1(array, 8)));
     }
 
     // Bruteforce Solution of Two Sum problem.

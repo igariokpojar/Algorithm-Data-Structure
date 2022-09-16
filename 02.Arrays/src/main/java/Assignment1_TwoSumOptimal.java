@@ -4,8 +4,8 @@ import java.util.Map;
 
 public class Assignment1_TwoSumOptimal {
     public static void main(String[] args) {
-        int[] array=new int[]{2,7,9,11};
-        System.out.println(Arrays.toString(twoSumOptimalSolution(array, 9)));
+        int[] array=new int[]{16,3,11,5,15};
+        System.out.println(Arrays.toString(twoSumOptimalSolution(array, 8)));
     }
     public static int[] twoSumOptimalSolution(int[] array, int targetValue){
         // Complexity of the solution is O(n) but I have space complexity of O(n)
