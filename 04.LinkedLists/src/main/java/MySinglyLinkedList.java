@@ -201,4 +201,26 @@ public class MySinglyLinkedList {
         }
         return true;
     }
+
+    public void moveZeros(int[] num){
+        int n = num.length;
+        if (n<2) return;
+        // define pointers
+        int p1=0,p2 =1;
+        // move zeros to the back
+        while (p2<n){
+            if (num[p1] !=0) {
+            p1++;
+            p2++;
+
+            } else if (num[p2]==0) {
+                p2++;
+            }else {
+                int temp=num[p2];
+                num[p2]=num[p1];
+                num[p1]=temp;
+                
+            }
+        }
+    }
 }

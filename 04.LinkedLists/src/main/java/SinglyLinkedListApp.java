@@ -1,7 +1,9 @@
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 
 public class SinglyLinkedListApp {
 
@@ -30,6 +32,8 @@ public class SinglyLinkedListApp {
         list.printNodes();
         list.removeDuplicates();
         list.printNodes();
+
+
 
     }
 }
