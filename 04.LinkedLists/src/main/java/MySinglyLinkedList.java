@@ -174,6 +174,31 @@ public class MySinglyLinkedList {
 
 
     }
+    public void removeDuplicates() {
 
+        Node current = head;
 
+        if (current == null) {
+            return;
+        }
+        while (current != null && current.next != null) {
+            if (current.id == current.next.id) {
+                current.next = current.next.next;
+            } else {
+                current = current.next;
+            }
+        }
+    }
+    public boolean validPalindrome(String str){
+
+        for (int i = 0, j =str.length()-1; i<j; i++, j--) {
+            while (i<j && !Character.isLetterOrDigit(str.charAt(i)))
+                i++;
+            while (i<j && !Character.isLetterOrDigit(str.charAt(i)))
+                j--;
+            if (i<j && Character.toLowerCase(str.charAt(i))!=Character.toLowerCase(str.charAt(j)))
+                return false;
+        }
+        return true;
+    }
 }
