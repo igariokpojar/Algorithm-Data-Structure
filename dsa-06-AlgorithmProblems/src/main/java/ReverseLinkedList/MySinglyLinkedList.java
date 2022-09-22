@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package ReverseLinkedList;
 
 public class MySinglyLinkedList {
     Node head;
@@ -9,36 +9,36 @@ public class MySinglyLinkedList {
         return head == null;
     }
 
-    void addFirst(int data){
-        // create a new node object from data
-        Node node=new Node(data);
-        // case 1: list empty
-        if(isEmpty()){
-            head=tail=node;
-        } else{// case 2 : list is not empty
-            node.next=head;
-            head=node;
-        }
-        //increase size
-        size++;
-    }
-    public int getKthItemFromLast(int k){
+  void addFirst(int data){
+      // create a new node object from data
+      Node node=new Node(data);
+     // case 1: list empty
+      if(isEmpty()){
+       head=tail=node;
+      } else{// case 2 : list is not empty
+          node.next=head;
+          head=node;
+      }
+      //increase size
+      size++;
+  }
+  public int getKthItemFromLast(int k){
         // create two pointers
         Node ptr1=head;
         Node ptr2=head;
         // move ptr2 k-1 times
 
-        for (int i = 0; i < k-1; i++) {
-            ptr2=ptr2.next;
-        }
-        // move both pointers until ptr2 hits the last element
-        while(ptr2.next!=null){
-            ptr1=ptr1.next;
-            ptr2=ptr2.next;
-        }
-        // ptr1 is on the kth element from the last
-        return ptr1.id;
-    }
+      for (int i = 0; i < k-1; i++) {
+          ptr2=ptr2.next;
+      }
+      // move both pointers until ptr2 hits the last element
+      while(ptr2.next!=null){
+          ptr1=ptr1.next;
+          ptr2=ptr2.next;
+      }
+      // ptr1 is on the kth element from the last
+      return ptr1.id;
+  }
     public void removeKthItemFromLast(int k){
         // create three pointers
         Node ptr1=head;
@@ -56,7 +56,7 @@ public class MySinglyLinkedList {
             ptr2=ptr2.next;
         }
         // ptr1 is on the kth element from the last
-        // Do delete operation
+       // Do delete operation
         if (ptr1==head){
             head=ptr1.next;
             ptr1.next=null;
@@ -137,17 +137,16 @@ public class MySinglyLinkedList {
         while(current!=null){
             if (current.next==null) System.out.println(current.id+"=> null");
             else {
-                System.out.print(current.id+"=> ");
+            System.out.print(current.id+"=> ");
             }
             current=current.next;
         }
-    }
+  }
 
 
     public void removeKthFromLast2(int k){
         Node ptr1=head;
         Node ptr2=head;
-
         for(int i=0;i<k-1;i++) {
 
             ptr2=ptr2.next;
@@ -160,7 +159,6 @@ public class MySinglyLinkedList {
                 return;
             }
         }
-
         while(ptr2.next.next!=null) {
 
             ptr1=ptr1.next;
@@ -174,53 +172,6 @@ public class MySinglyLinkedList {
 
 
     }
-    public void removeDuplicates() {
-        if (isEmpty()) System.out.println("List is empty!");
-        Node current = head;
 
-        if (current == null) {
-            return ;
-        }
-        while (current != null && current.next != null) {
-            if (current.id == current.next.id) {
-                current.next = current.next.next;
-            } else {
-                current = current.next;
-            }
-        }
-    }
-    public boolean validPalindrome(String str){
 
-        for (int i = 0, j =str.length()-1; i<j; i++, j--) {
-            while (i<j && !Character.isLetterOrDigit(str.charAt(i)))
-                i++;
-            while (i<j && !Character.isLetterOrDigit(str.charAt(i)))
-                j--;
-            if (i<j && Character.toLowerCase(str.charAt(i))!=Character.toLowerCase(str.charAt(j)))
-                return false;
-        }
-        return true;
-    }
-
-    public void moveZeros(int[] num){
-        int n = num.length;
-        if (n<2) return;
-        // define pointers
-        int p1=0,p2 =1;
-        // move zeros to the back
-        while (p2<n){
-            if (num[p1] !=0) {
-            p1++;
-            p2++;
-
-            } else if (num[p2]==0) {
-                p2++;
-            }else {
-                int temp=num[p2];
-                num[p2]=num[p1];
-                num[p1]=temp;
-                
-            }
-        }
-    }
 }
