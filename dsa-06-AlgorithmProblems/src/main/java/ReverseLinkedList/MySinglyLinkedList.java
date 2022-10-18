@@ -171,6 +171,7 @@ public class MySinglyLinkedList {
         ptr1=null;
 
 
+
     }
 
 

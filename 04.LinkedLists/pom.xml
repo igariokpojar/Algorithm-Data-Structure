@@ -18,6 +18,12 @@
             <artifactId>parboiled-core</artifactId>
             <version>1.1.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>dsa-06-AlgorithmProblems</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <properties>
