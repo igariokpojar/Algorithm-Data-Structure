@@ -24,7 +24,7 @@ public class MyQueue<T> { // Generic type of Q
         QNode frontNode;
         if(isEmpty()) throw new NoSuchElementException(); // if the Q is empty then trow an exception
         // for one element in queue
-        if(front==back){ // if front is equal to bach then stop
+        if(front==back){ // if front is equal to back it means that we have only one element
             frontNode=front;
             front=back=null; // the assign nul to front and back
         } // now I have more than one element
