@@ -1,33 +1,36 @@
 import java.util.NoSuchElementException;
 
-public class MyQueue<T> {
+public class MyQueue<T> { // Generic type of Q
+
     QNode<T> front;
     QNode<T> back;
-    int size;
-    boolean isEmpty(){return front==null;}
+    int size; // size of the Q
+    boolean isEmpty(){return front==null;} // to understand if the Q is empty or not
     T peek() {
-        return (T) front.value;
+        return (T) front.value; // return the value of the front
     }
-    void enqueue(T item){
-        QNode<T> node=new QNode<>(item);
+    void enqueue(T item){ // add item to the Q
+        QNode<T> node = new QNode<>(item); // create a new Node
+        // if the Q is empty
         if(isEmpty()) front=back=node;
         else {
             back.next=node;
             back=node;
         }
-        size++;
+        size++; // increase the size
     }
+    //
     T dequeue(){
         QNode frontNode;
-        if(isEmpty()) throw new NoSuchElementException();
+        if(isEmpty()) throw new NoSuchElementException(); // if the Q is empty then trow an exception
         // for one element in queue
-        if(front==back){
+        if(front==back){ // if front is equal to bach then stop
             frontNode=front;
-            front=back=null;
+            front=back=null; // the assign nul to front and back
         } // now I have more than one element
         else{
-            frontNode=front;
-            front=front.next;
+            frontNode=front; // assign value to the front
+            front=front.next; // the new front is equal to front.next
         }
         size--;
         return (T) frontNode.value;
