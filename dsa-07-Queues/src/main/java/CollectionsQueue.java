@@ -10,6 +10,7 @@ public class CollectionsQueue {
    mq.enqueue(2);
         System.out.println(mq.dequeue());
         System.out.println(mq.dequeue());
+
         Queue<Integer> cq=new LinkedList<>();
         cq.add(1);
         cq.add(3);
