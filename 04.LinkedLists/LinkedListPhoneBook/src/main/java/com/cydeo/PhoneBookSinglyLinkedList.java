@@ -131,7 +131,7 @@ public class PhoneBookSinglyLinkedList{
 /*
  Implement a phone book using a linked list structure. In this phone book , you are going to store a name,lastname,email,and phone number
 
-Implement the folowing methods by using this class
+Implement the following methods by using this class
 
 public class PhoneBookSinglyLinkedList {
 
