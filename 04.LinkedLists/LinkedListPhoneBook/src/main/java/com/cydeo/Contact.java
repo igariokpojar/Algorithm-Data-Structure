@@ -16,8 +16,8 @@ public class Contact {
     String phoneNumber;
 
     //parameterized constructor
-    public Contact(String name, String lastName, String email, String phoneNumber) {
-        this.firstName = name;
+    public Contact(String firstName, String lastName, String email, String phoneNumber) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
