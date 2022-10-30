@@ -43,18 +43,21 @@ public class MyTree {
         preOrderTraversal(root.leftChild);
         preOrderTraversal(root.rightChild);
     }
+
     void inOrderTraversal(TNode root){
         if (root==null) return;
         inOrderTraversal(root.leftChild);
         System.out.print(root.value+", ");
         inOrderTraversal(root.rightChild);
     }
+
     void postOrderTraversal(TNode root){
         if (root==null) return;
         postOrderTraversal(root.leftChild);
         postOrderTraversal(root.rightChild);
         System.out.print(root.value+", ");
     }
+
     void levelOrderTraversal(){
         if(root==null) return;
         Queue<TNode>  queue=new LinkedList<>();
