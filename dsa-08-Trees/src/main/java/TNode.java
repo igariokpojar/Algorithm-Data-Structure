@@ -1,6 +1,6 @@
 public class TNode {
 
-
+// Create a Tree Node
     int value;
     TNode leftChild;
     TNode rightChild;
