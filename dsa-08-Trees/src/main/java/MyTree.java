@@ -7,7 +7,7 @@ public class MyTree {
     public MyTree() {
     }
     void insert(int value){
-        TNode newNode=new TNode(value);
+        TNode newNode=new TNode(value); // create a new Tree Node from scratch
         if (root==null) {
             root=newNode;
             return;
