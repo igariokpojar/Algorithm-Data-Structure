@@ -1,7 +1,7 @@
 public class TNode {
 
 // Create a Tree Node
-    int value;
+    int value; // to keep the simplicity if the structure
     TNode leftChild;
     TNode rightChild;
 
