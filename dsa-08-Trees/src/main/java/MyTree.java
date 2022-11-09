@@ -101,13 +101,36 @@ public class MyTree {
         if (root==null)return;
         // perform visit on Root
         if (isLeaf(root)) System.out.print(root.value + ", ");
+
             // Recursively Branch Left Subtree
         printLeaves(root.leftChild);
-        printLeaves(root.rightChild);
+
         // Recursively Branch Right Subtree
+        printLeaves(root.rightChild);
+    }
 
+// Task 4: Implement a method that counts Leafs of a BST
+    int countLeaves(TNode root){
+     if (root==null)return 0;
+     if (isLeaf(root)) return 1;
+     // recursively left
+     // recursively right
+     return countLeaves(root.leftChild)+countLeaves(root.rightChild);
+    }
 
+    //Task 5: Implement a method that returns sum of leafs value of a BST
+    int findSumOfLeaves(TNode root) {
+        if (root == null) return 0;
+        if (isLeaf(root)) return root.value; // we return the value of the leaves
 
+        return findSumOfLeaves(root.leftChild) + findSumOfLeaves(root.rightChild);
+
+    }
+    // TAsk 6: Implement a method that returns height of a Tree in a BST
+    int height(TNode root){
+        if (root==null)return -1;
+        if (isLeaf(root))return 0;
+        return 1+Math.max(height(root.leftChild),(height(root.rightChild)));
     }
 
 

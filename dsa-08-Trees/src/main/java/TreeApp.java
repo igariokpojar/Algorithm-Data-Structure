@@ -20,7 +20,18 @@ public class TreeApp {
 
 */
         System.out.println(tree.contains(88));
+
         tree.printLeaves(tree.root);
+
+        System.out.println();
+
+        System.out.println("Number of leaves: " + tree.countLeaves(tree.root));
+
+        System.out.println("Sum of Leaf Nodes: "+tree.findSumOfLeaves(tree.root));
+
+        System.out.println("Height of the tree is: "+tree.height(tree.root));
+
+
     }
 
 }
