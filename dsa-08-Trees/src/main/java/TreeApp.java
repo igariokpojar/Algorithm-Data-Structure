@@ -6,7 +6,7 @@ public class TreeApp {
             tree.insert(numbers[i]);
         }
         VisualizeTree.printTree(tree.root,null,false);
-
+/*
         tree.preOrderTraversal(tree.root);
         System.out.println();
         System.out.println("In Order Traversal :");
@@ -18,7 +18,9 @@ public class TreeApp {
         System.out.println("Level Order Traversal: ");
         tree.levelOrderTraversal();
 
-
+*/
+        System.out.println(tree.contains(88));
+        tree.printLeaves(tree.root);
     }
 
 }

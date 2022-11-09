@@ -1,3 +1,5 @@
+import org.w3c.dom.Node;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -71,4 +73,44 @@ public class MyTree {
 
         }
     }
+
+    // TAsk 1: implement finding an integer value in a BST(Binary Search Tree)
+    public boolean contains(int value) {
+        if (root == null) return false;
+        TNode current = root;
+
+        while (current != null) {
+            if (value < current.value) current = current.leftChild;
+            else if (value > current.value) current = current.rightChild;
+           else return true;
+
+        }
+        return false;
+    }
+
+
+// Task 2: Implement a method that returns true if the node is a leaf in a BST
+    public boolean isLeaf(TNode node){
+
+        return node.leftChild==null && node.rightChild==null;
+    }
+
+
+// Task 3: Implement a method that prints leaves on a BTS
+    public void printLeaves(TNode root){
+        if (root==null)return;
+        // perform visit on Root
+        if (isLeaf(root)) System.out.print(root.value + ", ");
+            // Recursively Branch Left Subtree
+        printLeaves(root.leftChild);
+        printLeaves(root.rightChild);
+        // Recursively Branch Right Subtree
+
+
+
+    }
+
+
+
+
 }
