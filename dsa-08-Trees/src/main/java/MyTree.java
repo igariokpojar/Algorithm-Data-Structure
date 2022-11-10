@@ -62,7 +62,7 @@ public class MyTree {
 
     void levelOrderTraversal(){ // Called Breadth First(Level Order)
         if(root==null) return;
-        Queue<TNode>  queue=new LinkedList<>();
+        Queue<TNode> queue = new LinkedList<>();
         queue.add(root);
         while(!queue.isEmpty()){
             TNode toVisit=queue.poll();
