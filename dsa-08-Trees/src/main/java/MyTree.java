@@ -1,7 +1,7 @@
 import org.w3c.dom.Node;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import javax.swing.tree.TreeNode;
+import java.util.*;
 
 public class MyTree {
     TNode root;
@@ -133,7 +133,35 @@ public class MyTree {
         return 1+Math.max(height(root.leftChild),(height(root.rightChild)));
     }
 
+    // to store the value of roots create a bucket
+    LinkedList<Integer> list = new LinkedList<>();
 
-
-
+    public  List<Integer> inorderTraversal(TNode root) {
+        if (root != null) {
+            inorderTraversal(root.leftChild);
+            list.add(root.value);
+            inorderTraversal(root.rightChild);
+        }
+        return list;
+    }
+    public List<Integer> InorderTraversal(TNode root) {
+        List<Integer> res = new ArrayList<>();
+        // method 2: iteration
+        Stack<TNode> stack = new Stack<>();
+        TNode current = root;
+        while (current != null || !stack.isEmpty()) {
+            while (current!= null) {
+                stack.push(current);
+                current =current.leftChild;
+            }
+            current = stack.pop();
+            res.add(current.value);
+            current = current.rightChild;
+        }
+        return res;
+    }
 }
+
+
+
+
