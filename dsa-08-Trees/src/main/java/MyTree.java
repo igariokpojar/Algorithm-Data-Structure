@@ -160,7 +160,53 @@ public class MyTree {
         }
         return res;
     }
+
+    public int calculateNodeDepthSums() { // instantiate the root to 0
+        return nodeDepthSums(root, 0);
+    }
+    // Assignment  Sum of Node Depths
+    public int nodeDepthSums(TNode node, int A){
+        if(node==null) return 0; // if note is null the return 0
+        System.out.println(A);
+        return A+nodeDepthSums(node.leftChild, A+1) +nodeDepthSums(node.rightChild, A+1);
+    }
+
+    // Assignment  Sum of All Nodes
+    public int calculateNodeSums(){
+        return nodeSums(root, root.value);
+    }
+    // Assignment  Sum of Node Depths
+    public int nodeSums(TNode node, int sum) {
+        if (node == null) return 0;
+        return sum + nodeSums(node.leftChild, node.value) + nodeSums(node.rightChild, node.value);
+    }
+
+
 }
+    /*
+    Sum of Node Depths
+The distance between a node in a Binary Tree and the tree's root is called the node's depth. Write a
+function that takes in a Binary Tree and returns the sum of its nodes' depths. Each BinaryTree node has an
+integer value , a left child node, and a right child node. Children nodes can either be BinaryTree nodes
+themselves or None / null .
+Sample Input
+Tree. =
+           1
+         /   \
+        2     3
+       / \   / \
+      4   5 6   7
+     / \
+    8   9
+Sample Output
+16
+// The depth of the node with value 2 is 1.
+// The depth of the node with value 3 is 1.
+// The depth of the node with value 4 is 2.
+// The depth of the node with value 5 is 2.
+// Etc..
+// Summing all of these depths yields 16
+     */
 
 
 
