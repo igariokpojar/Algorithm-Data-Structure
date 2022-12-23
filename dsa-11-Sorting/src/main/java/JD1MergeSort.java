@@ -1,6 +1,7 @@
 public class JD1MergeSort {
    public static void mergeSort(int[] array){
        if (array.length<2) return;// if you have an array with one element STOP
+       // now we are separate the list in two parts
        int mid=array.length/2;
        int[] leftArray=new int[mid];
        for (int i = 0; i <mid ; i++) leftArray[i]=array[i];
