@@ -1,6 +1,9 @@
 public class JD1QuickSort {
     public static void qSort(int[] array, int start, int end){
+        //So I have 2 pointers start and end. Okay,
+        //if the left pointer exceeds the right pointer. This means that I'm at the end. Okay.
        if (start>=end) return; //termination
+        //Partition is the place where I divide or split the array in two pieces.
        int boundary=partition(array, start, end);
        qSort(array, start, boundary-1);// call qSort for left part
        qSort(array,boundary+1, end);// call qSort for right part
